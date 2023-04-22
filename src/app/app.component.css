@@ -25,3 +25,79 @@ button {
 p {
   margin: 0.5rem 0;
 }
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-messages {
+  overflow-y: auto;
+  flex: 1;
+  padding: 10px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.message-container:last-child {
+  margin-bottom: 0;
+}
+
+.message {
+  display: inline-block;
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #25D366;
+  align-self: flex-end;
+  color: #FFFFFF;
+}
+
+.chatGPT-message {
+  background-color: #128C7E;
+  align-self: flex-start;
+  color: #FFFFFF;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #F5F5F5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.chat-input button {
+  border: none;
+  background-color: #128C7E;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+

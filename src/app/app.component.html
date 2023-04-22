@@ -1,11 +1,13 @@
-<div>
-  <h2>Chat Interface</h2>
-  <div class="form">
-    <input type="text" name="message" placeholder="Type your message here" [(ngModel)]="userMessage"/>
+<div class="chat-container">
+  <div class="chat-messages" *ngIf="indexes.length > 1">
+    <div class="message-container" *ngFor="let index of indexes" >
+      <div class="message user-message">{{userMessages[index]}}</div>
+      <div class="message chatGPT-message">{{chatGPT_messages[index]}}</div>
+    </div>
+  </div>
+  <div class="chat-input">
+    <input type="text" name="message" placeholder="Type your message here" [(ngModel)]="userMessage">
     <button (click)="createChatCompletion()">Send</button>
   </div>
-  <div *ngFor="let index of indexes">
-    <p>You: {{userMessages[index]}}</p>
-    <p>ChatGPT: {{chatGPT_messages[index]}}</p>
-  </div>
 </div>
+
