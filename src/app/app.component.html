@@ -1,5 +1,5 @@
 <div class="chat-container">
-  <div class="chat-messages" *ngIf="indexes.length > 1">
+  <div class="chat-messages">
     <div class="message-container" *ngFor="let index of indexes" >
       <div class="message user-message">{{userMessages[index]}}</div>
       <div class="message chatGPT-message">{{chatGPT_messages[index]}}</div>

@@ -12,7 +12,7 @@ export class AppComponent {
   userMessages:any[] = [];
   chatGPT_message:string = '';
   chatGPT_messages:any = [];
-  indexes = [0]
+  indexes:number[] = []
 
 
 
@@ -26,6 +26,9 @@ private apiUrl = 'https://api.openai.com/v1/chat/completions';
 
     this.indexes.push(this.indexes.length)
     this.userMessages.push(this.userMessage)
+    this.chatGPT_messages.push("Test")
+
+    this.userMessage = " "
 
     const headers = {
       'Content-Type': 'application/json',
