@@ -37,11 +37,11 @@ private apiUrl = 'https://api.openai.com/v1/chat/completions';
       messages
     };
 
-    await this.http.post(this.apiUrl, body, {headers}).subscribe((result:any) =>{
-      console.log(result.choices[0].message.content)
-      this.chatGPT_message = result.choices[0].message.content
-      this.chatGPT_messages.push(result.choices[0].message.content)
-    })
+    // await this.http.post(this.apiUrl, body, {headers}).subscribe((result:any) =>{
+    //   console.log(result.choices[0].message.content)
+    //   this.chatGPT_message = result.choices[0].message.content
+    //   this.chatGPT_messages.push(result.choices[0].message.content)
+    // })
   }
 
 }
